@@ -10,7 +10,7 @@ import {
 } from "react-router-dom";
 
 function App() {
-  document.title = "Namma Chikmagalauru";
+  document.title = "Admin";
 
   return (
     <div className="App">

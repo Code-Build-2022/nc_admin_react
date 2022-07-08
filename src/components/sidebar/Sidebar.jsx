@@ -15,9 +15,10 @@ const Sidebar = () => {
     
     <div className="sidebar">
       <div className="top px-2 pt-2 ">
-        <div className="logo" >
-     <img className="rounded w-100" src="logo.jpeg" alt="" />
-        </div>
+        <span className="logo" >
+     {/* <img className="rounded w-100" src="logo.jpeg" alt="" /> */}
+Namma Chikmagaluru
+        </span>
       </div>
       <hr/>
       <div className="center">

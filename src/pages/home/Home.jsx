@@ -3,6 +3,7 @@ import './home.scss'
 import Sidebar from '../../components/sidebar/Sidebar';
 
 import Navbar from '../../components/navbar/Navbar'
+import Widget from '../../components/widget/Widget';
 
 
 const Home = () => {
@@ -14,11 +15,15 @@ const Home = () => {
 <Sidebar/>
 <div className="homeContainer">
 <Navbar/>
-home container
+<div className="widgets">
+  <Widget type="users"/>
+  <Widget type="hotels"/>
+  <Widget type="bookings"/>
+
+
 </div>
-
-
-    </div>
+</div>
+</div>
 
     </>
   )

@@ -30,12 +30,12 @@ Namma Chikmagaluru
           </li>
           <p className="title">LIST</p>
           <li>
-            <BedroomParentIcon className="icon"/>
-            <span>Hotels</span>
-          </li>
-          <li>
             <CardMembershipIcon className="icon"/>
             <span>Bookings</span>
+          </li>
+          <li>
+            <BedroomParentIcon className="icon"/>
+            <span>Hotels</span>
           </li>
           <li>
             <HikingIcon className="icon"/>

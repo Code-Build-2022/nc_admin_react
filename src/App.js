@@ -11,6 +11,7 @@ import {
 
 function App() {
   document.title = "Namma Chikmagalauru";
+  //1
   return (
     <div className="App">
   

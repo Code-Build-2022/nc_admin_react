@@ -8,6 +8,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import NewHotel from "./pages/newHotel/NewHotel";
 
 function App() {
   document.title = "Admin";
@@ -21,13 +22,41 @@ function App() {
      <Route path="/" >
       <Route index element={<Home/>}></Route>
      <Route path="login" element={<Login/>}></Route>
-     <Route path="users">
+     <Route path="user">
       <Route index element={<List/>}/>
       <Route path=":userId" element={<Single/>}/>
       <Route path="new" element={<NewPage/>}/>
      </Route>
+     <Route path="/hotel" >
+<Route index element={<List/>}/>
+<Route path=":hotelId" element={<Single/>}/>
+<Route path="new" element={<NewHotel/>}/>
      </Route>
+     <Route path="/trekking" >
+<Route index element={<List/>}/>
+<Route path=":trekkingId" element={<Single/>}/>
+<Route path="new" element={<NewPage/>}/>
+     </Route>
+     <Route path="/adventure" >
+<Route index element={<List/>}/>
+<Route path=":adventureId" element={<Single/>}/>
+<Route path="new" element={<NewPage/>}/>
+     </Route>
+     <Route path="/holiday" >
+<Route index element={<List/>}/>
+<Route path=":holidayId" element={<Single/>}/>
+<Route path="new" element={<NewPage/>}/>
+     </Route>
+     <Route path="/booking" >
+<Route index element={<List/>}/>
+<Route path=":bookingId" element={<Single/>}/>
+<Route path="new" element={<NewPage/>}/>
+     </Route>
+     </Route>
+     <Route path="/enquiry" >
+<Route index element={<List/>}/>
 
+     </Route>
     </Routes>
   </BrowserRouter>
 

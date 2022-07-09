@@ -1,12 +1,12 @@
-import './adventure.scss'
+import './trekking.scss'
 import Sidebar from '../../components/sidebar/Sidebar'
 import Navbar from '../../components/navbar/Navbar'
 import {Form,FloatingLabel,Row,Col,Button} from 'react-bootstrap'
 import { useFormik } from 'formik';
 import { useState } from 'react';
 import { DropzoneArea } from "material-ui-dropzone";
-import FireplaceIcon from '@mui/icons-material/Fireplace';
-const Adventure = () => {
+import DownhillSkiingIcon from '@mui/icons-material/DownhillSkiing';
+const Trekking = () => {
   const [validated, setValidated] = useState(false);
   const [adhaarImg,setAdhaarImg]=useState({})
   const handleAdhaarUpload=(event)=>{
@@ -15,7 +15,7 @@ const Adventure = () => {
         }
   const formik = useFormik({
     initialValues: {
-      campname: '',
+      trekname: '',
       price:"",
       available_bool:"",
       address:"",
@@ -38,7 +38,7 @@ const Adventure = () => {
 //     "Content-Type": "multipart/form-data",
 //   },
 // })
-if(values.campname=="" || values.price=="" || values.address=="" || values.available_bool=="" || values.price=="" || values.description=="" ){
+if(values.trekname=="" || values.price=="" || values.address=="" || values.available_bool=="" || values.price=="" || values.description=="" ){
   alert('all fields required !! check "choose type of hotel"!!')
   setValidated(true)
   return
@@ -51,24 +51,24 @@ setValidated(false)
   });
  
   return (
-    <div className='adventure'>
+    <div className='trekking'>
   
  <Sidebar/>
- <div className="adventureContainer">
+ <div className="trekkingContainer">
  <Navbar />
  <div className='form'>
-<span className='title'><FireplaceIcon className='icon'/> Add Adventure a.k.a Camping Details</span>
+<span className='title'><DownhillSkiingIcon className='icon'/> Add Trekking Details</span>
  
 <Form className='px-4 pt-2 pb-5 bg-white' noValidate validated={validated} encType="multipart/form-data" onSubmit={formik.handleSubmit}>
         <Row className="mb-1 mt-3">
           <Form.Group as={Col} md="6" controlId="validationCustom01">
           <FloatingLabel
     controlId="floatingInput"
-    label="Camp or Adventure name"
+    label="Trek name"
     className="mb-3">
-    <Form.Control onChange={formik.handleChange}  value={formik.values.campname}   name='campname'   required type="text" placeholder="name@example.com" />
+    <Form.Control onChange={formik.handleChange}  value={formik.values.trekname}   name='trekname'   required type="text" placeholder="name@example.com" />
     <Form.Control.Feedback type="invalid">
-                Please enter camp name.
+                Please enter trek name.
               </Form.Control.Feedback>
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
   </FloatingLabel>
@@ -152,5 +152,4 @@ setValidated(false)
   )
 }
 
-export default Adventure
-
+export default Trekking

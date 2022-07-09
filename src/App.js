@@ -2,13 +2,15 @@ import Home from "./pages/home/Home";
 import Login from "./pages/login/Login"
 import List from "./pages/list/List";
 import Single from "./pages/single/Single";
-import NewPage from "./pages/newPage/NewPage"
+import NewPage from "./pages/newPage/NewPage";
+import Trekking from "./pages/newTrekking/Trekking";
 import {
   BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
 import NewHotel from "./pages/newHotel/NewHotel";
+import Adventure from "./pages/adventure/Adventure";
 
 function App() {
   document.title = "Admin";
@@ -35,12 +37,12 @@ function App() {
      <Route path="/trekking" >
 <Route index element={<List/>}/>
 <Route path=":trekkingId" element={<Single/>}/>
-<Route path="new" element={<NewPage/>}/>
+<Route path="new" element={<Trekking/>}/>
      </Route>
      <Route path="/adventure" >
 <Route index element={<List/>}/>
 <Route path=":adventureId" element={<Single/>}/>
-<Route path="new" element={<NewPage/>}/>
+<Route path="new" element={<Adventure/>}/>
      </Route>
      <Route path="/holiday" >
 <Route index element={<List/>}/>

@@ -7,7 +7,7 @@ const Datatable = () => {
   // let row;
   const location = useLocation();
   const path = location.pathname.split("/")[1];
-  console.log(path)
+console.log(path)
 
   if(path==="hotels"){
 
@@ -33,9 +33,9 @@ const actionColumn=[
     <div className='datatable'>
        <div className="datatableTitle">
         {path}s
-        <Link to={`/${path}/new`} className="link">
+      { ("enquiry"!==path)? (<Link to={`/${path}/new`} className="link">
           Add New {path}
-        </Link>
+        </Link>):""}
       </div>
        <DataGrid
         rows={userRows}

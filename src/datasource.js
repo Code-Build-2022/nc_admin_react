@@ -1,7 +1,7 @@
 //temporary data until we connect beckend 
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 export const userRows=[
-    { id: 1, username: 'Snow',  age: 35 ,phone:768768,city:"Banglore",bookings:1},
+    { id: 1, username: 'Suhan',  age: 35 ,phone:768768,city:"Banglore",bookings:1},
     { id: 2, username: 'Lannister', age: 42,phone:768768,city:"Banglore",bookings:1 },
     { id: 3, username: 'Lannister',  age: 45 ,phone:768768,city:"Banglore",bookings:1},
     { id: 4, username: 'Stark', age: 16 ,phone:768768,city:"Banglore",bookings:1},

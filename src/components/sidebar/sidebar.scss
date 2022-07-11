@@ -18,6 +18,10 @@
         list-style: none;
         margin: 0;
         padding: 0;
+      .active{       
+            background-color:#fcf2fc; 
+   
+      } 
         li{
             display: flex;
             align-items: center;
@@ -28,6 +32,7 @@
                 font-size: 18px;
                 color: #c613d6;
             }
+           
             span{
                 font-size: 13px;
                 font-weight: 600;
@@ -35,7 +40,7 @@
                 margin-left: 9px;
                         }
 
-            &:hover{  
+                      &:hover{  
                background-color:#fcf2fc; 
             }
         }
@@ -57,9 +62,12 @@
         align-items: center;
 
         .logo{
-           img{
-            box-shadow: 0 0 0.2rem !important;
-           }
+      
+        font-size: 20px;
+        font-weight: bolder;
+        color: #c613d6;
+
+       
         }
          }
 

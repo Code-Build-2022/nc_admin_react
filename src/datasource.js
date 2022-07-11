@@ -33,11 +33,11 @@ return (
  ]
 
  export const hotelColumns = [
-    { field: "_id", headerName: "ID", width: 250 },
+    { field: "id", headerName: "ID", width: 80 },
     {
       field: "name",
-      headerName: "Name",
-      width: 150,
+      headerName: "Hotel Name",
+      width: 130,
     },
     {
       field: "type",
@@ -45,13 +45,22 @@ return (
       width: 100,
     },
     {
-      field: "title",
-      headerName: "Title",
-      width: 230,
-    },
-    {
-      field: "city",
-      headerName: "City",
+      field: "rooms",
+      headerName: "No of Rooms",
       width: 100,
     },
+    {
+      field: "address",
+      headerName: "Address",
+      width: 150,
+    },
   ];
+
+  export const hotelRows=[
+{
+  id:1,name:'royal hotel',type:"resort",rooms:2,address:"uppali,chokkamagalur"
+},
+{
+  id:2,name:'GK hotel',type:"premium",rooms:23,address:"bazzzaar,chokkamagalur"
+}
+  ]

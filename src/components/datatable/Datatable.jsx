@@ -1,6 +1,6 @@
 import { DataGrid} from '@mui/x-data-grid';
 import "./datatable.scss"
-import {userRows,userColumns} from '../../datasource'
+import {userRows,userColumns,hotelColumns,hotelRows} from '../../datasource'
 import { Link, useLocation } from "react-router-dom";
 
 const Datatable = () => {
@@ -8,10 +8,18 @@ const Datatable = () => {
   const location = useLocation();
   const path = location.pathname.split("/")[1];
 console.log(path)
+let rows,columns;
 
-  if(path==="hotels"){
-
-  }
+if(path=='hotel'){
+  rows=hotelRows;
+  columns=hotelColumns;
+}else if(path=='user'){
+  rows=userRows;
+  columns=userColumns;
+}else{
+  rows=userRows;
+  columns=userColumns;
+}
 const actionColumn=[
     {
         field:"action",
@@ -38,8 +46,8 @@ const actionColumn=[
         </Link>):""}
       </div>
        <DataGrid
-        rows={userRows}
-        columns={userColumns.concat(actionColumn)}
+        rows={rows}
+        columns={columns.concat(actionColumn)}
         pageSize={5}
         rowsPerPageOptions={[5]}
         checkboxSelection

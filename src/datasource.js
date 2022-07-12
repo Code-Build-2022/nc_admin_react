@@ -64,3 +64,98 @@ return (
   id:2,name:'GK hotel',type:"premium",rooms:23,address:"bazzzaar,chokkamagalur"
 }
   ]
+  
+// yah se
+  export const trekkingColumns=[
+    // { field: "id", headerName: "ID", width: 80 },
+
+    {
+      field: "trekname",
+      headerName: "TrekName",
+      width: 130,
+    },
+    {
+      field: "price",
+      headerName: "Price",
+      width: 130,
+    },
+    {
+      field: "address",
+      headerName: "Address",
+      width: 130,
+    },
+    {
+      field: "available",
+      headerName: "Is It Available",
+      width: 130,
+    },
+    {
+      field: "description",
+      headerName: "Description",
+      width: 180,
+    },
+  ]
+
+  export const trekkingRows=[
+    {
+      id:1,trekname: "Baba budan giri",price:"5000",address:"Chikmagalur,attigundi",available:"Yes",description:"Baba Budan Giri is a mountain in range of the Western Ghats of India. Located in the Chikmagaluru taluk, Chikmagaluru District of Karnataka"
+    },
+    {
+      id:2,trekname: "Mullaingiri",price:"1000",address:"Chikmagalur",available:"Yes",description:"good"
+    },  
+    {
+      id:3,trekname: "bandeKallu gudda",price:"2000",address:"Chikmagalur",available:"Yes",description:"good"
+    },
+  {
+    id:4,trekname: "Jhari falls",price:"4000",address:"Chikmagalur",available:"Yes",description:"good"
+  }, 
+  {
+    id:5,trekname: "kalhat giri",price:"3000",address:"Chikmagalur",available:"Yes",description:"good"
+  }
+]
+
+export const adventureColumns =[
+  
+    {
+      field: "adventureName",
+      headerName: "Adventure Name",
+      width: 180,
+    },
+    {
+      field: "price",
+      headerName: "Price",
+      width: 130,
+    },
+    {
+      field: "address",
+      headerName: "Address",
+      width: 130,
+    },
+    {
+      field: "available",
+      headerName: "Is It Available",
+      width: 130,
+    },
+    {
+      field: "description",
+      headerName: "Description",
+      width: 180,
+    },  
+  
+]
+
+export const adventureRows = [
+  {
+    id:1,adventureName:"muthoddi",price:"4000",address:"Chikmagalur",available:"Yes",description:"good"
+  },
+  {
+    id:2,adventureName:"jungle",price:"5000",address:"india",available:"Yes",description:"Mountain"
+  },
+  {
+    id:3,adventureName:"Forest",price:"6000",address:"karnatak",available:"Yes",description:"good"
+  },
+  {
+    id:4,adventureName:"amazon",price:"7000",address:"world",available:"Yes",description:"good"
+  },
+  
+]

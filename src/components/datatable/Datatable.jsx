@@ -1,6 +1,6 @@
 import { DataGrid} from '@mui/x-data-grid';
 import "./datatable.scss"
-import {userRows,userColumns,hotelColumns,hotelRows} from '../../datasource'
+import {userRows,userColumns,hotelColumns,hotelRows,trekkingColumns,trekkingRows,adventureColumns,adventureRows} from '../../datasource'
 import { Link, useLocation } from "react-router-dom";
 
 const Datatable = () => {
@@ -16,19 +16,38 @@ if(path=='hotel'){
 }else if(path=='user'){
   rows=userRows;
   columns=userColumns;
+}
+else if(path=='trekking'){
+  rows=trekkingRows;  
+  columns =trekkingColumns;
+}else if(path=='adventure'){
+  rows=adventureRows;
+  columns=adventureColumns;
 }else{
   rows=userRows;
   columns=userColumns;
 }
+///....
+// if(path=="trekking"){
+// rows=trekkingRows;  
+// columns =trekkingColumns;
+// }
+// if(path=='adventure'){
+//    columns=adventureColumns;
+// }
+
+
 const actionColumn=[
     {
         field:"action",
         headerName:"Action",
         width:190,
-        renderCell:()=>{
+        renderCell:(params)=>{
+          console.log(params.id)
             return (
             <div className='cellAction'>
-        <div className="viewButton">View</div>
+        
+        <Link to={`/${path}/${params.id}`}><div className="viewButton" style={{ textDecoration: "none !important" }}>View</div></Link>
         <div className='deleteButton'>Delete</div>
             </div>
             )

@@ -67,7 +67,7 @@ return (
   
 // yah se
   export const trekkingColumns=[
-    // { field: "id", headerName: "ID", width: 80 },
+    { field: "id", headerName: "ID", width: 55 },
 
     {
       field: "trekname",
@@ -115,6 +115,11 @@ return (
 ]
 
 export const adventureColumns =[
+  {
+    field: "id",
+    headerName: "ID",
+    width: 55,
+  },
   
     {
       field: "adventureName",

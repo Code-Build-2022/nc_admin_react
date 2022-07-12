@@ -3,6 +3,7 @@ import './single.scss'
 import Navbar from '../../components/navbar/Navbar'
 import Sidebar from '../../components/sidebar/Sidebar'
 import { useLocation } from 'react-router-dom'
+
 const Single = () => {
   const location=useLocation()
   console.log(location.pathname.split('/')[2])
@@ -12,8 +13,13 @@ const Single = () => {
   <Sidebar/>
   <div className="singleContainer">
     <Navbar/>
-    single
+  {  location.pathname.split('/')[2]}
+  <p>suhan</p>
   </div>
+  
+
+
+
 </div>
 
   )

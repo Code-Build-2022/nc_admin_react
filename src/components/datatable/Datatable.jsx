@@ -7,7 +7,7 @@ const Datatable = () => {
   // let row;
   const location = useLocation();
   const path = location.pathname.split("/")[1];
-console.log(path)
+
 let rows,columns;
 
 if(path=='hotel'){
@@ -27,14 +27,12 @@ else if(path=='trekking'){
   rows=userRows;
   columns=userColumns;
 }
-///....
-// if(path=="trekking"){
-// rows=trekkingRows;  
-// columns =trekkingColumns;
-// }
-// if(path=='adventure'){
-//    columns=adventureColumns;
-// }
+
+
+//delete data ny id
+function deleteHandler(id){
+console.log(id)
+}
 
 
 const actionColumn=[
@@ -43,12 +41,13 @@ const actionColumn=[
         headerName:"Action",
         width:190,
         renderCell:(params)=>{
-          console.log(params.id)
+    
             return (
             <div className='cellAction'>
         
-        <Link to={`/${path}/${params.id}`}><div className="viewButton" style={{ textDecoration: "none !important" }}>View</div></Link>
-        <div className='deleteButton'>Delete</div>
+        <Link to={`/${path}/${params.id}`} style={{ textDecoration: 'none' }} >
+          <span className="viewButton" >View</span></Link>
+        <div className='deleteButton' onClick={()=>deleteHandler(params.id)}>Delete</div>
             </div>
             )
         }
@@ -69,7 +68,8 @@ const actionColumn=[
         columns={columns.concat(actionColumn)}
         pageSize={5}
         rowsPerPageOptions={[5]}
-        checkboxSelection
+
+       
       />
     </div>
   )

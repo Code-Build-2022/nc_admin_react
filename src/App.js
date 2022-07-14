@@ -34,6 +34,11 @@ function App() {
 <Route path=":hotelId" element={<Single/>}/>
 <Route path="new" element={<NewHotel/>}/>
      </Route>
+     <Route path="/room" >
+<Route index element={<List/>}/>
+<Route path=":roomId" element={<Single/>}/>
+<Route path="new" element={<Trekking/>}/>
+     </Route>
      <Route path="/trekking" >
 <Route index element={<List/>}/>
 <Route path=":trekkingId" element={<Single/>}/>

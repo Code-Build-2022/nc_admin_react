@@ -7,6 +7,11 @@ import { useLocation } from 'react-router-dom'
 const Single = () => {
   const location=useLocation()
   console.log(location.pathname.split('/')[2])
+  const search = useLocation().search;
+  const name = new URLSearchParams(search).get("name");
+  console.log(name)
+  
+
   return (
 
 <div className="single">
@@ -14,7 +19,8 @@ const Single = () => {
   <div className="singleContainer">
     <Navbar/>
   {  location.pathname.split('/')[2]}
-  <p>suhan</p>
+
+  <p>single page</p>
   </div>
   
 

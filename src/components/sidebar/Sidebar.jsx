@@ -10,6 +10,7 @@ import HolidayVillageIcon from "@mui/icons-material/HolidayVillage";
 import LogoutIcon from "@mui/icons-material/Logout";
 import PersonIcon from "@mui/icons-material/Person";
 import { Link, useLocation } from "react-router-dom";
+import WcIcon from '@mui/icons-material/Wc';
 const Sidebar = () => {
   const location=useLocation()
   const path=location.pathname
@@ -45,6 +46,12 @@ const Sidebar = () => {
             <li className={("/hotel"===path || "hotel"===splitPath)? "active" : ""}>
               <BedroomParentIcon className="icon" />
               <span>Hotels</span>
+            </li>
+          </Link>
+          <Link to="/room" style={{ textDecoration: "none" }}>
+            <li className={("/room"===path || "room"===splitPath)? "active" : ""}>
+              <WcIcon className="icon" />
+              <span>Rooms</span>
             </li>
           </Link>
           <Link to="/trekking" style={{ textDecoration: "none" }}>
